@@ -31,6 +31,7 @@
 #include "pybind/core/core.h"
 #include "pybind/geometry/geometry.h"
 #include "pybind/io/io.h"
+#include "pybind/ml/ml.h"
 #include "pybind/pipelines/pipelines.h"
 #include "pybind/tgeometry/geometry.h"
 #include "pybind/utility/utility.h"
@@ -59,6 +60,7 @@ PYBIND11_MODULE(pybind, m) {
     pybind_core(m);
     pybind_geometry(m);
     tgeometry::pybind_geometry(m);  // TODO: add namespace to other bindings.
+    ml::pybind_ml(m);               // TODO: add namespace to other bindings.
     pybind_io(m);
     pybind_pipelines(m);
     pybind_visualization(m);
